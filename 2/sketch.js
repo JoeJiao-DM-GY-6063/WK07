@@ -20,6 +20,22 @@ function setup() {
   mImg.updatePixels();
 
   image(mImg, 0, 0);
+
+  mImg.loadPixels();
+
+  for (let idx = 0; idx < mImg.pixels.length; idx += 4) {
+    let redVal = mImg.pixels[idx+0];
+    let greenVal = mImg.pixels[idx+1];
+    let blueVal = mImg.pixels[idx+2];
+    let alphaVal = mImg.pixels[idx+3];
+
+    mImg.pixel[idx+1]=0;
+    mImg.pixel[idx +2]=0;
+  }
+  mString.updatePixels();
+
+  image
+
 }
 
 function draw() {}
